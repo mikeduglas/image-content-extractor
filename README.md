@@ -5,16 +5,29 @@ Below are the original image (with a background around a content) and the croppe
 ![Original image](https://github.com/mikeduglas/image-content-extractor/blob/master/screenshots/card1.jpg?raw=true)  
 ![Cropped image](https://github.com/mikeduglas/image-content-extractor/blob/master/screenshots/card1_cropped.jpg?raw=true)  
 
+### Usage
+The simplest code snippet is as following:
+```
+  DATA
+ix                            TImageContentExtractor
+  CODE
+  ix.SetMinColorDiffLevel(7)
+  ix.SetMinLineDiffLevel(2)
+  ix.ExtractContent(sSrcImageFile, sImageContentFile)
+```
+
 ### Demo program
-An utility that extracts image contents (removes a background area around the actual contents).
-![Image contents extractor UI](https://github.com/mikeduglas/image-content-extractor/blob/master/screenshots/ice_1.jpg?raw=true)  
+An utility that extracts image contents (removes a background area around the actual contents). It can be running weather in interactive (GUI) or command line modes.
 
 ### Interactive mode
 Run ice.exe to open the utility in UI mode.  
+![Image contents extractor UI](https://github.com/mikeduglas/image-content-extractor/blob/master/screenshots/ice_1.jpg?raw=true)  
 When a user opens an image, the extraction process is running automatically and cropped image is displayed immediately. Adjusting of Color difference level and Line difference level repeats the extraction process with new settings. To save cropped image click Save.
 
 ### Command line mode
+```
 ice.exe Source=SourceFilePath Target=TargetFilePath [ColorDiffLevel=IntegerValue] [LineDiffLevel=FloatValue]  
+```
 
 Command line parameters:
 - Source: source image file
