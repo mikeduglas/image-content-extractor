@@ -23,7 +23,7 @@ Command line parameters:
 - LineDiffLevel: Line difference level (omittable, 2 by default)
   
 Example:  
-ice.exe Source=.\images\card1.jpg Target=.\images\card1_croppen.jpg
+ice.exe Source=.\images\card1.jpg Target=.\images\card1_cropped.jpg
 
 ### Requirements
 - C6.3 and higher
